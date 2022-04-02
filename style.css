@@ -1,0 +1,42 @@
+.clock {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.clock--wallpaper {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hand-second, .hand-minute, .hand-hour {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  height: 100%;
+}
+
+.hand-second {
+  width: 2px;
+  background-image: linear-gradient(transparent 12%, black 12%, black 56%, transparent 56%);
+  transform: translate(-50%, -15%) skewY(-1.5deg) rotate(0deg);
+}
+
+.hand-minute{
+  width: 3.5px;
+  background-image: linear-gradient(transparent 15%, black 15%, black 55%, transparent 55%);
+  transform: translate(-50%, -15%) skewY(-1.5deg) rotate(90deg);
+}
+.hand-hour {
+  width: 6px;
+  background-image: linear-gradient(transparent 20%, black 20%, black 55%, transparent 55%);
+  transform: translate(-50%, -15%) skewY(-1.5deg) rotate(210deg);
+}
